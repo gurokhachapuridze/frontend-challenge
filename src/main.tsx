@@ -8,7 +8,7 @@ import { ImageProvider } from './contexts/ImageContext.tsx'; // Import ImageProv
 async function enableMocking() {
 	// if (import.meta.env.MODE !== 'development') return;
 	// if (import.meta.env.VITE_ENV !== 'development') return;
-	const { worker } = await import('./components/mocks/browser');
+	const { worker } = await import('./mocks/browser.ts');
 	try {
 		await worker.start({
 			serviceWorker: {
